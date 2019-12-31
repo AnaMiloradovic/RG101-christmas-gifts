@@ -7,7 +7,7 @@ U duhu prestojećih praznika jedna prava Novogodišnja i Božićna igra kako za 
 <img src = 'https://raw.githubusercontent.com/MATF-RG19/RG101-christmas-gifts/master/Screenshots/christmas.jpg' width = "800px" alt = "drawing"/>
 
 
-## 🎲 Pravila igre
+## :gift: Pravila igre
 
 * Klikom na taster 'S' ili 's' (Start) započinjete igru. 
 * Igru je moguće pauzirati u svakom trenu pritiskom na taster 'P' ili 'p' (Pause) ili je resetovati, pritiskom na 'r' ili 'R' (Reset).
