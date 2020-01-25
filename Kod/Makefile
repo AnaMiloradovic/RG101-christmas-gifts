@@ -1,10 +1,11 @@
-PROGRAM   = 1
+PROGRAM   = main
 CC        = gcc
 CFLAGS    = -g -Wall
-LDFLAGS   = -lGL -lGLU -lglut
+LDFLAGS   = -lGL -lGLU -lglut -lm -std=c99
+FAJLOVI   = komande.c objekti.c logika.c
 
-$(PROGRAM): main.o
-	$(CC) -o $(PROGRAM) main.o $(LDFLAGS)
+$(PROGRAM): $(PROGRAM).c $(FAJLOVI)
+	$(CC) -o $(PROGRAM) $(PROGRAM).c $(FAJLOVI) $(LDFLAGS)
 
 .PHONY: clean dist
 
@@ -13,3 +14,5 @@ clean:
 
 dist: clean
 	-tar -chvj -C .. -f ../$(PROGRAM).tar.bz2 $(PROGRAM)
+
+
