@@ -101,7 +101,7 @@ void drawSnowman(int type) {
 
 void drawSnowmen() {
 	//Crtamo svakog sneska koji je aktivan
-	for (int i=0; i<MAX_GIFTS; i++) {
+	for (int i=0; i<MAX_SNOWMEN; i++) {
 		if (!snowmen[i].active) {
 			continue;
 		}

@@ -8,6 +8,7 @@
 #define TIMER_ID 0
 #define TIMER_INTERVAL 30
 #define MAX_GIFTS 5
+#define MAX_SNOWMEN 5
 #define MAX_LIVES 5
 
 typedef struct gift{

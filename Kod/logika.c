@@ -25,7 +25,7 @@ void setGame() {
 	timer = 0;
 	lives = MAX_LIVES;
 	score = 0;
-	for (int i=0; i<MAX_GIFTS; i++){
+	for (int i=0; i<MAX_SNOWMEN; i++){
 		resetBlock(i);
 		resetSnowman(i);
 	}
@@ -61,7 +61,7 @@ void updateSnowmen() {
 	//Sto je vise vremena proslo od pocetka partije to se snesko belici brze krecu
 	double speed = 0.1 + timer*0.00005;
 
-	for (int i=0; i<MAX_GIFTS; i++) {
+	for (int i=0; i<MAX_SNOWMEN; i++) {
 		if (!snowmen[i].active) {
 			continue;
 		}
@@ -89,12 +89,12 @@ void updateSnowmen() {
 
 void checkHit(){
 	//Proverava se sudar sneska i poklona
-	for (int i=0; i<MAX_GIFTS; i++) {
+	for (int i=0; i<MAX_SNOWMEN; i++) {
 		if (!snowmen[i].active)
 			continue;
                 
 		//Ako je poklon dovoljno blizu po x i ako je nizi od 4 onda se registruje sudar
-		for (int j=0; j<MAX_GIFTS; j++) {
+		for (int j=0; j<MAX_SNOWMEN; j++) {
 			if (fabs(snowmen[i].x-gifts[j].x) < 2 && gifts[j].y < 4) {
 				resetBlock(j);
 				resetSnowman(i);
@@ -125,7 +125,7 @@ void throwGift() {
 //Brojimo koliko je sneska trenutno aktivno na ekranu
 int countSnowmen() {
 	int count = 0;
-	for(int i=0; i<MAX_GIFTS; i++) {
+	for(int i=0; i<MAX_SNOWMEN; i++) {
 		if(snowmen[i].active)
 			count++;
 	}
@@ -137,7 +137,7 @@ void addSnowman() {
 	int darkSnowmanChance = 30;
 
 	//Prolazimo kroz niz i prvog sneska koji nije aktivan aktiviramo
-	for (int i=0; i<MAX_GIFTS; i++) {
+	for (int i=0; i<MAX_SNOWMEN; i++) {
 		if (!snowmen[i].active) {
 			snowmen[i].active = 1;
 			
